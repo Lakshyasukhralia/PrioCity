@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "950579922069",
+    "firebase_url": "https://priocity-82ca8.firebaseio.com",
+    "project_id": "priocity-82ca8",
+    "storage_bucket": "priocity-82ca8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950579922069:android:b595545a512ede8c98879c",
+        "android_client_info": {
+          "package_name": "com.sukhralia.priocity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950579922069-rpf4lb0g7p61177eik5ul5a26qk5uadb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sukhralia.priocity",
+            "certificate_hash": "928bbd6efded9e8d1b77e9d07b0c06b331adc5c0"
+          }
+        },
+        {
+          "client_id": "950579922069-9vdl5epq1sa0t4d1roav7j8geceu75mu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDv6PIqu-uHs3Hfdam915mwyR3G4f5DYOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950579922069-9vdl5epq1sa0t4d1roav7j8geceu75mu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

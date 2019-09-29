@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/editIssue"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="20dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="92dp"
+        android:background="@layout/edit_text_border"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="State your issue here"
+        android:inputType="textMultiLine"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingPriority" />
+
+    <Spinner
+        android:id="@+id/spinnerRegion"
+        android:layout_width="239dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:textAlignment="gravity"
+        android:theme="@style/CustomSpinnerTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textArea"
+        app:layout_constraintTop_toTopOf="@+id/textArea" />
+
+    <TextView
+        android:id="@+id/textArea"
+        android:layout_width="98dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="184dp"
+        android:gravity="center"
+        android:text="Region"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textPriority"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="Priority"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textArea" />
+
+    <Button
+        android:id="@+id/btnSubmit"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editIssue"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <RatingBar
+
+        android:id="@+id/ratingPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:numStars="5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textPriority"
+        app:layout_constraintTop_toTopOf="@+id/textPriority" />
+</androidx.constraintlayout.widget.ConstraintLayout>
