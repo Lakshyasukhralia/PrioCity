@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.report_item.view.*
 
 
-class ReportAdapter(val context: Context,val reportList:List<IssueDTO> ):RecyclerView.Adapter<ReportAdapter.ReportViewHolder>() {
+class ReportAdapter(val context: Context,val reportList:MutableList<IssueDTO> ):RecyclerView.Adapter<ReportAdapter.ReportViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReportViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.report_item,parent,false)
         return ReportViewHolder(view)
@@ -26,6 +26,9 @@ class ReportAdapter(val context: Context,val reportList:List<IssueDTO> ):Recycle
     inner class ReportViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
         fun setData(report:IssueDTO?){
         itemView.textRegion.text = report!!.region
+            itemView.textCreateDate.text = report!!.createDate
+            itemView.textPriority.text = report!!.priority.toString()
+            itemView.textIssue.text = report!!.issue
         }
     }
 }

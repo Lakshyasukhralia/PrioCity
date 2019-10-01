@@ -12,11 +12,13 @@ import kotlinx.android.synthetic.main.menu_report.*
 
 class ReportMenuActivity : AppCompatActivity(){
 
-    lateinit var reportList:ArrayList<IssueDTO>
+    lateinit var reportList:MutableList<IssueDTO>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.menu_report)
+
+        reportList = mutableListOf()
 
         btnSubmitReport.setOnClickListener {
             val intent = Intent(this,ReportSubmissionActivity::class.java)
@@ -33,6 +35,7 @@ class ReportMenuActivity : AppCompatActivity(){
 
                 override fun onDataChange(p0: DataSnapshot) {
                     if(p0!!.exists()){
+                        reportList.clear()
                         for(r in p0.children){
                             val report = r.getValue(IssueDTO::class.java)
                             reportList.add(report!!)
@@ -40,7 +43,7 @@ class ReportMenuActivity : AppCompatActivity(){
                     }
 
                     val intent = Intent(this@ReportMenuActivity,ReportAllActivity::class.java)
-                    intent.putExtra("reportList",reportList)
+                    intent.putParcelableArrayListExtra("reportList",ArrayList(reportList))
                     startActivity(intent)
                     Log.i("reportList",reportList.toString())
                 }
