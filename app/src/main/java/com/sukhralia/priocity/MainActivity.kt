@@ -11,11 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button.setOnClickListener {
-            var msg = editText.text.toString()
-//            saveToDB(msg)
-        }
-
         btnReport.setOnClickListener {
             val intent = Intent(this,ReportMenuActivity::class.java)
             startActivity(intent)

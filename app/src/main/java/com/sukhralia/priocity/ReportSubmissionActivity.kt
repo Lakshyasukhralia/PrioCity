@@ -18,20 +18,21 @@ class ReportSubmissionActivity :AppCompatActivity(){
 
             val region :String? = spinnerRegion.selectedItem.toString()
             val priority : Float? = ratingPriority.rating
+            val subject : String? = editSubject.text.toString()
             val issue : String? = editIssue.text.toString()
 
             if (priority!=0f&&!issue.isNullOrBlank())
-                saveToDB(region!!,priority!!,issue)
+                saveToDB(region!!,priority!!,subject!!,issue)
             else
                 Toast.makeText(this,"Missing fields : Failed to push!", Toast.LENGTH_SHORT).show()
         }
     }
 
-    fun saveToDB(region:String, priority:Float, issue:String){
+    fun saveToDB(region:String, priority:Float, subject:String,issue:String){
         val ref = FirebaseDatabase.getInstance().getReference("IssueRequestNode")
         val pId = ref.push().key
 
-        val reportObject = IssueRequest(pId!!,region,priority,issue)
+        val reportObject = IssueRequest(pId!!,region,priority,subject,issue)
         ref.child(pId!!).setValue(reportObject).addOnCompleteListener {
         Toast.makeText(this,"Successfully pushed", Toast.LENGTH_SHORT).show()
         }

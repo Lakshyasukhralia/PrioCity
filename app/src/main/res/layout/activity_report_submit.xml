@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp">
@@ -13,15 +12,15 @@
         android:layout_height="120dp"
         android:layout_margin="20dp"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="92dp"
         android:background="@layout/edit_text_border"
         android:ems="10"
         android:gravity="center"
         android:hint="State your issue here"
         android:inputType="textMultiLine"
         android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingPriority" />
+        app:layout_constraintTop_toBottomOf="@+id/editSubject" />
 
     <Spinner
         android:id="@+id/spinnerRegion"
@@ -47,7 +46,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textPriority"
+        android:id="@+id/textRatingPriority"
         android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
@@ -79,6 +78,20 @@
         android:layout_height="60dp"
         android:numStars="5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textPriority"
-        app:layout_constraintTop_toTopOf="@+id/textPriority" />
+        app:layout_constraintStart_toEndOf="@+id/textRatingPriority"
+        app:layout_constraintTop_toTopOf="@+id/textRatingPriority" />
+
+    <EditText
+        android:id="@+id/editSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:ems="10"
+        android:hint="Subject"
+        android:gravity="center"
+        android:inputType="textPersonName"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ratingPriority" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,6 +20,9 @@
         <activity android:name=".ReportMenuActivity"></activity>
         <activity android:name=".ReportSubmissionActivity"></activity>
         <activity android:name=".ReportAllActivity"></activity>
+        <activity android:name=".ReportPopUp"
+            android:theme="@style/AppTheme.PopUpTheme">
+        </activity>
     </application>
 
 </manifest>
